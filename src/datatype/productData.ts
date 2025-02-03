@@ -1,11 +1,18 @@
 
- export interface ProductData {
+
+type Slug = {
+  current: string;
+  _type: "slug";
+};
+
+ export interface ProducT {
     _id: string;
     title: string;
-    slug:{
-      _type: "slug";
-      current: string;
-    }
+    // slug:{
+    //   _type: "slug";
+    //   current: string;
+    // }
+    slug: Slug;
     priceWithoutDiscount: number | null;
     category: {
       _id: string;
@@ -20,24 +27,3 @@
   };
   
   
-// export interface Product  {
-//   _id: string;
-//   title: string;
-//   _type: "product",
-//   price: number;
-//   imageUrl: {
-//     asset:{
-//       _ref: string;
-//       _Image: "image"
-//     }
-//   };
-//   slug:{
-//     _type: "slug";
-//     current: string;
-//   }
-//   originalPrice?: number;
-//   isNew?: boolean;
-//   isSale?: boolean;
-//   description?: string;
-//   discount?: { percentage: number; code: string };
-// };
