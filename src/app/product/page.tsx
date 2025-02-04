@@ -7,19 +7,6 @@ import Link from "next/link";
 import React from "react";
 // import { FiShoppingCart } from "react-icons/fi";
 
-type ProductS = {
-  _id: string;
-    title: string;
-    slug:{
-      _type: "slug";
-      current: string;
-    }
-    // slug: Slug;
-    priceWithoutDiscount: number | null;
-    price: number;
-    badge: string | null;
-    imageUrl: string;
-}
 
 export default async function  ProductListPage() {
   const query = `*[_type=='products'] | order(_createdAt asc){

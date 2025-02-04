@@ -4,9 +4,13 @@ import { ProducT } from '@/datatype/productData'
 import { urlFor } from '@/sanity/lib/image'
 import Image from 'next/image'
 import React from 'react'
-import Link from "next/link";
+// import { useCart } from "@/context/CartContext";
+
+
 
 export default function BlogCard({product}:{product:ProducT}) {
+  // const { addToCart } = useCart();
+
   return (
     <>
       
@@ -39,12 +43,21 @@ export default function BlogCard({product}:{product:ProducT}) {
                    </div>
      
                    {/* Add to Cart Button */}
-                   {/* <Link href={`/product/${product._id}`} > */}
-                   <div className="absolute top-[329.5px] right-0 bg-[#F0F2F3] hover:bg-[#029FAE] rounded-md w-[44px] h-[44px] flex items-center justify-center text-[#272343] hover:text-white">
-                     <FiShoppingCart className="w-5 h-5" />
-                   </div>
-                   {/* </Link> */}
-     
+                   {/* <div
+        onClick={() =>
+          addToCart({
+            _id: product._id,
+            title: product.title,
+            imageUrl: product.imageUrl,
+            price: product.price,
+            quantity: 1,
+          })
+        }
+        className="absolute top-[329.5px] right-0 bg-[#F0F2F3] hover:bg-[#029FAE] rounded-md w-[44px] h-[44px] flex items-center justify-center text-[#272343] hover:text-white cursor-pointer"
+      >
+        <FiShoppingCart className="w-5 h-5" />
+      </div>
+      */}
                    {/* Badge */}
                    {product.badge && (
                      <div
