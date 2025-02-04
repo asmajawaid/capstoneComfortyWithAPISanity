@@ -1,5 +1,5 @@
 
-import { FiShoppingCart } from "react-icons/fi";
+// import { FiShoppingCart } from "react-icons/fi";
 import { ProducT } from '@/datatype/productData'
 import { urlFor } from '@/sanity/lib/image'
 import Image from 'next/image'
