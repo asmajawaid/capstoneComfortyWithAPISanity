@@ -1,18 +1,26 @@
 
 import React from 'react'
-import Link from 'next/link';
+import Hero from '@/components/Hero';
+import CompanyLogo from './companyLogo/page';
+import FeatureProduct from '@/components/FeatureProduct';
+import TopCategories from '@/components/TopCategories';
+import NewStyle from '@/components/NewStyle'
+import OurProduct from '@/components/OurProduct'
+
+
+
 
 export default function Home() {
+  
   return (
   <>
-
-
-
- <Link href="/product" className='bg-indigo-500 p-4 '>
- <button className='mt-16'>
-  product
- </button>
- </Link>
+     <Hero/>
+     <CompanyLogo/>
+     <FeatureProduct/>
+     <TopCategories/>
+     <NewStyle/>
+     <OurProduct/>
+ 
  
   </>
   );
